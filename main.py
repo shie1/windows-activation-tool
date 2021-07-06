@@ -6,7 +6,7 @@ def main():
     from platform import release
     from threading import Thread
     import nopopups
-    print(f"Windows {edition()} Edition detected!")
+    print(f"Windows {release()} {edition()} Edition detected!")
     print("\nInstalling product key...")
 
     keys = {
@@ -73,7 +73,6 @@ def main():
     print("Press any key to exit...")
     system("pause >nul")
     sys.exit()
-    
     
 def is_admin():
     try:
