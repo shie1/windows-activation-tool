@@ -2,11 +2,9 @@ import ctypes, sys
 
 def main():
     from os import system
-    from platform import win32_edition as edition
-    from platform import release
-    from threading import Thread
+    from platform import win32_edition, release
     import nopopups
-    print(f"Windows {edition()} Edition detected!")
+    print(f"Windows {win32_edition()} Edition detected!")
     print("\nInstalling product key...")
 
     keys = {
@@ -22,7 +20,7 @@ def main():
         "Enterprise N": "DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4"
     }
 
-    key = keys[edition()]
+    key = keys[win32_edition()]
 
     system(f"slmgr /ipk {key}")
     print(f'Product key "{key}" successfully installed!')
