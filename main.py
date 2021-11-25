@@ -4,7 +4,6 @@ def main():
     from os import system
     from platform import win32_edition as edition
     from platform import release
-    from threading import Thread
     import nopopups
     print(f"Windows {release()} {edition()} Edition detected!")
     print("\nInstalling product key...")
